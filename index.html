@@ -10,8 +10,8 @@ function metrictime() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    var mh = math.floor(h / 24 * 10);
-    var mm = ((h / 24 * 10) - math.floor(h / 24 * 10)) * 10 + math.floor(m / 60 * 100);
+    var mh = Math.floor(h / 24 * 10);
+    var mm = ((h / 24 * 10) - Math.floor(h / 24 * 10)) * 10 + Math.floor(m / 60 * 100);
     var colon = ":";
     var n = mh.concat(colon,mm);
     document.getElementById("metrictime").innerHTML = n;
