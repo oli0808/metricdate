@@ -6,15 +6,20 @@
 <p>An OCD idea. Currently under construction, in the meantime, here's the metrictime:</p>
 <p id="metrictime"></p>
 <script>
-function metrictime() {
+function myFunction() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
+    var s = d.getSeconds();
     var mh = Math.floor(h / 24 * 10);
-    var mm = ((h / 24 * 10) - Math.floor(h / 24 * 10)) * 10 + Math.floor(m / 60 * 100);
+    var mm = Math.floor(((h / 24 * 10) - Math.floor(h / 24 * 10)) * 10 + Math.floor(m / 60 * 100));
+    //var ms = ()((h / 24 * 10) - Math.floor(h / 24 * 10)) * 10 + Math.floor(m / 60 * 100)) - Math.floor(((h / 24 * 10) - Math.floor(h / 24 * 10)) * 10 + Math.floor(m / 60 * 100))) / 60 * 100 + Math.floor(s / 60 * 100);
     var colon = ":";
-    var n = mh.concat(colon,mm);
-    document.getElementById("metrictime").innerHTML = n;
+    var mhs = mh.toString();
+    var mms = mm.toString();
+    //var mss = ms.toString();
+    var mt = mhs.concat(colon,mms);
+    document.getElementById("demo").innerHTML = mt;
 }
 </script>
 
