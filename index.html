@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body onload="metrictime()">
+<body onload="mtFunc()">
 <h1>metricdate</h1>
 <br>
 <p>An OCD idea. Currently under construction, in the meantime, here's the metrictime:</p>
 <p id="metrictime"></p>
 <script>
-function metrictime() {
+function mtFunc() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
@@ -19,7 +19,7 @@ function metrictime() {
     var mms = mm.toString();
     //var mss = ms.toString();
     var mt = mhs.concat(colon,mms);
-    document.getElementById("demo").innerHTML = mt;
+    document.getElementById("metrictime").innerHTML = mt;
 }
 </script>
 
