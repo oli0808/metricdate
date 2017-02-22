@@ -1,3 +1,23 @@
-Metricdate, an OCD idea.
+<!DOCTYPE html>
+<html>
+<body>
 
-(c) OS Industries 2017
+<h1>metricdate</h1>
+<br>
+<p>An OCD idea. Currently under construction, in the meantime, here's the metrictime:</p>
+<p id="metrictime"></p>
+<script>
+function myFunction() {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var mh = int(h / 24 * 10);
+    var mm = ((h / 24 * 10) - int(h / 24 * 10)) * 10 + int(m / 60 * 100);
+    var colon = ":";
+    var n = mh.concat(colon,mm);
+    document.getElementById("metrictime").innerHTML = n;
+}
+</script>
+
+<br>
+<p>(c) OS Industries 2017</p>
