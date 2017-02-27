@@ -13,9 +13,9 @@ function mtFunc() {
     var s = d.getSeconds();
     var t = h * 60 * 60 + m * 60 + s;
     var mt = ("000000" + Math.floor(t / 86400 * 100000)).slice(-6);
-    var mh = mt.substring(0,1);
-    var mm = mt.substring(2,3);
-    var ms = mt.substring(4,5);
+    var mh = mt.substring(0,2);
+    var mm = mt.substring(2,2);
+    var ms = mt.substring(4,2);
     var colon = ":"
     
 
