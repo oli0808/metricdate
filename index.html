@@ -14,14 +14,14 @@ function mtFunc() {
     var t = h * 60 * 60 + m * 60 + s;
     var mt = ("000000" + Math.floor(t / 86400 * 100000)).slice(-6);
     var mh = mt.substring(0,2);
-    var mm = mt.substring(2,2);
-    var ms = mt.substring(4,2);
+    var mm = mt.substring(2,4);
+    var ms = mt.substring(4);
     var colon = ":"
     
 
     
     var st = mh.concat(colon,mm,colon,ms);
-    document.getElementById("metrictime").innerHTML = mt;
+    document.getElementById("metrictime").innerHTML = st;
 }
 </script>
 
